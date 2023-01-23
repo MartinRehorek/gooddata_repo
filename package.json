@@ -1,0 +1,26 @@
+{
+  "name": "the_caffeine_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon --exec node ./src/index.js | pino-pretty",
+    "lint:fix": "eslint --fix './**/*.js'",
+    "format": "prettier --write './**/*.{js,md,json}' --config ./.prettierrc"
+  },
+  "author": "Martin Rehorek",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "env-var": "^7.3.0",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.3",
+    "helmet": "^6.0.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0",
+    "pino": "^8.8.0",
+    "pino-pretty": "^9.1.1"
+  }
+}

@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14.5-alpine
+    container_name: postgres-database-gooddata
+    hostname: postgres-host
+    env_file:
+      - ./postgres.env
+    restart: always
+    ports:
+      - '5432:5432'
+    volumes: 
+      - postgresql_data:/var/lib/postgresql/data
+    networks:
+      - postgres-network
+
+networks:
+  postgres-network:
+    driver: bridge
+  
+volumes:
+  postgresql_data:
+    driver: local
